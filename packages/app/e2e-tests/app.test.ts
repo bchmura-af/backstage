@@ -24,4 +24,12 @@ test('App should render the welcome page', async ({ page }) => {
   await enterButton.click();
 
   await expect(page.getByText('My Company Catalog')).toBeVisible();
+  /* Left Menu */
+  await expect(page.getByText('Home')).toBeVisible();
+  await expect(page.getByText('APIs')).toBeVisible();
+  await expect(page.getByText('Docs')).toBeVisible();
+  await expect(page.getByText('Create...')).toBeVisible();
+  await expect(page.getByText('Tech Radar')).toBeVisible();
+
+  await expect(page.getByText('Settings')).toBeVisible();
 });
